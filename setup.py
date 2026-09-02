@@ -24,7 +24,10 @@ setup(
     install_requires=['pycbc', 'xpsi'],
     packages=find_packages(),
     entry_points={
-        "pycbc.inference.models": "pycbc_xpsi_stu = pycbc_xpsi:XPSI_STUModel",
+        "pycbc.inference.models": [
+            "pycbc_xpsi_stu = pycbc_xpsi:XPSI_STUModel", 
+            "pycbc_xpsi_pdtu = pycbc_xpsi:XPSI_PDTUModel",
+        ],
     },
     classifiers=[
         'Programming Language :: Python',
